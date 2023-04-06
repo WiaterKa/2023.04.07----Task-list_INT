@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <main>
+      <div class="list-container">
+        <div class="container-heading">
+          <h1>Todo</h1>
+          <div class="svg-icon"></div>
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+        <div class="container-form">
+          <!-- <label for="lname">Last name:</label><br> -->
+          <button class="btn"></button>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Create a new todo..."
+          />
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <div class="container-list">
+          <ul>
+            <li><button class="btn"></button>Jebać Pis</li>
+          </ul>
+        </div>
 
-  Todo
+        <div class="container-footer">
+          <p class="p-primary"></p>
+          <div class="filter-options">
+            <p class="p-primary">All</p>
+            <p class="p-primary">Active</p>
+            <p class="p-primary">Completed</p>
+          </div>
+          <p class="p-primary">Clear Completed</p>
+        </div>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Drag and drop to reorder list -->
+      </div>
+    </main>
+  </body>
 </html>
