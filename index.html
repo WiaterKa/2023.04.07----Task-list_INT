@@ -20,42 +20,41 @@
     <title>Frontend Mentor | Todo app</title>
   </head>
   <body>
-    <main>
-      <div class="list-container">
-        <div class="container-heading">
-          <h1>Todo</h1>
-          <div class="svg-icon"></div>
-        </div>
-
-        <div class="container-form">
-          <!-- <label for="lname">Last name:</label><br> -->
-          <button class="btn"></button>
-          <input
-            type="text"
-            id="lname"
-            name="lname"
-            placeholder="Create a new todo..."
-          />
-        </div>
-
-        <div class="container-list">
-          <ul>
-            <li><button class="btn"></button>Jebać Pis</li>
-          </ul>
-        </div>
-
-        <div class="container-footer">
-          <p class="p-primary"></p>
-          <div class="filter-options">
-            <p class="p-primary">All</p>
-            <p class="p-primary">Active</p>
-            <p class="p-primary">Completed</p>
-          </div>
-          <p class="p-primary">Clear Completed</p>
-        </div>
-
-        <!-- Drag and drop to reorder list -->
+    <div class="list-container">
+      <div class="container-heading">
+        <h1>Todo</h1>
+        <div class="svg-icon"></div>
       </div>
-    </main>
+
+      <div class="container-form">
+        <!-- <label for="lname">Last name:</label><br> -->
+        <button class="btn"></button>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Create a new todo..."
+        />
+      </div>
+
+      <div class="container-list">
+        <ul>
+          <li class="complete"><button class="btn"></button>Przykładowy li<div class="cross"></div></li>
+          <li><button class="btn"></button>Przykładowy li</li>
+        </ul>
+      </div>
+
+      <div class="container-footer">
+        <p class="p-primary"><span class="counter">5</span> items left</p>
+        <div class="filter-options">
+          <p class="p-primary">All</p>
+          <p class="p-primary">Active</p>
+          <p class="p-primary">Completed</p>
+        </div>
+        <p class="p-primary">Clear Completed</p>
+      </div>
+
+      <!-- Drag and drop to reorder list -->
+    </div>
   </body>
 </html>
