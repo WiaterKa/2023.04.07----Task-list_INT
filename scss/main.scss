@@ -30,14 +30,22 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -10;
+
+    @media screen and (max-width: 650px) {
+      background-image: url("../images/bg-mobile-dark.jpg");
+    }
   }
 }
 
 .list-container {
   width: 54rem;
-
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 650px) {
+    width: 90%;
+    margin-inline: 2.4rem;
+  }
 
   .container-heading {
     display: flex;
@@ -59,6 +67,7 @@ body {
       background-image: url("../images/icon-sun.svg");
       width: 2.6rem;
       height: 2.6rem;
+      cursor: pointer;
     }
   }
 
@@ -66,7 +75,7 @@ body {
     background: $primary-bcg-color;
     box-shadow: 0px 3.5rem 5rem -1.5rem rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
-    width: 54rem;
+    width: 100%;
     height: 6.4rem;
     display: flex;
     align-items: center;
@@ -89,6 +98,11 @@ body {
       placeholder {
         color: $primary-fnt-color;
       }
+
+      @media screen and (max-width: 500px) {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+      }
     }
   }
 
@@ -105,6 +119,12 @@ body {
     letter-spacing: -0.25px;
     color: $secondary-fnt-color;
     margin-top: 2.4rem;
+
+    @media screen and (max-width: 500px) {
+      border-radius: 5px;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+    }
 
     li {
       height: 6.4rem;
@@ -123,7 +143,25 @@ body {
         background-repeat: no-repeat;
         margin-left: 29rem; //do poprawy
         display: none;
+      }
+    }
 
+    .li-footer {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      letter-spacing: -0.194444px;
+      color: #5b5e7e;
+      border-color: none;
+      border-end-start-radius: 5px;
+      border-end-end-radius: 5px;
+      display: none;
+      border-color: #171823;
+
+      @media screen and (max-width: 500px) {
+        display: flex;
       }
     }
   }
@@ -144,22 +182,28 @@ body {
     padding: 1.6rem 2.4rem;
     height: 5rem;
 
+    @media screen and (max-width: 500px) {
+      border-radius: 5px;
+      justify-content: center;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+    }
+
+    .pd {
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+
     .filter-options {
       display: flex;
       gap: 1.9rem;
       font-weight: 700;
-
-      .filter-active {
-        color: #3a7cfd;
-      }
     }
 
-    .p-primary {
-      cursor: pointer;
-
-      &:hover {
-        color: #e3e4f1;
-      }
+    .filter-active {
+      color: #3a7cfd;
     }
   }
 }
@@ -197,4 +241,12 @@ button {
 .complete {
   color: #4d5067;
   text-decoration: line-through;
+}
+
+.p-primary {
+  cursor: pointer;
+
+  &:hover {
+    color: #e3e4f1;
+  }
 }
