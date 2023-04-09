@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 html {
@@ -41,6 +42,7 @@ body {
   width: 54rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
 
   @media screen and (max-width: 650px) {
     width: 90%;
@@ -84,7 +86,7 @@ body {
     gap: 2.4rem;
 
     input {
-      background-color: $primary-bcg-color;
+      background-color: transparent;
       font-family: "Josefin Sans";
       font-style: normal;
       font-weight: 400;
@@ -142,11 +144,8 @@ body {
         width: 1.8rem;
         background-repeat: no-repeat;
         // display: none;
+        opacity: 0;
         transition: 0.3s ease-in all;
-      }
-
-      .d-none {
-        display: flex;
       }
     }
 
@@ -162,7 +161,7 @@ body {
       border-end-start-radius: 5px;
       border-end-end-radius: 5px;
       display: none;
-      border-color: #171823;
+      border-color: transparent;
 
       @media screen and (max-width: 500px) {
         display: flex;
@@ -263,4 +262,34 @@ button {
 
 .disp-none {
   display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.white-bdy {
+  background-color: #fafafa;
+
+  &::before {
+    background-image: url("../images/bg-desktop-light.jpg");
+
+    @media screen and (max-width: 650px) {
+      background-image: url("../images/bg-mobile-light.jpg");
+    }
+  }
+}
+
+.white-bcg {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e3e4f1 !important;
+  color: #494c6b !important;
+}
+
+.moon {
+  background-image: url("../images/icon-moon.svg") !important;
+}
+
+.cross-visible {
+  opacity: 1 !important;
 }
