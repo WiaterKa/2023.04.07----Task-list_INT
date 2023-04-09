@@ -9,5 +9,8 @@
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-bundler": "^1.12.5"
+  },
+  "alias": {
+    "process": false
   }
 }
